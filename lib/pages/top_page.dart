@@ -4,6 +4,7 @@ import 'hero_animation_page.dart';
 import 'transition_page.dart';
 import 'open_container_page.dart';
 import 'animation_controller_page.dart';
+import 'tween_staggered_page.dart';
 
 class TopPage extends StatelessWidget {
   @override
@@ -87,6 +88,21 @@ class TopPage extends StatelessWidget {
               },
               child: Text(
                 "AnimationControllerサンプル",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () => {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return TweenStaggeredPage();
+                    },
+                  ),
+                )
+              },
+              child: Text(
+                "Tweenを使ったアニメーションサンプル",
                 style: TextStyle(fontSize: 20),
               ),
             ),

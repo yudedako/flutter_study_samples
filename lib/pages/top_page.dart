@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'table_page.dart';
 import 'hero_animation_page.dart';
+import 'transition_page.dart';
 
 class TopPage extends StatelessWidget {
   @override
@@ -14,21 +15,39 @@ class TopPage extends StatelessWidget {
           children: <Widget>[
             TextButton(
               onPressed: () => {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return TablePage();
-                }))
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return TablePage();
+                    },
+                  ),
+                )
               },
               child: Text("tableサンプル", style: TextStyle(fontSize: 20)),
             ),
             TextButton(
               onPressed: () => {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return HeroFromPage();
-                }))
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return HeroFromPage();
+                    },
+                  ),
+                )
               },
               child: Text("Heroアニメーションサンプル", style: TextStyle(fontSize: 20)),
+            ),
+            TextButton(
+              onPressed: () => {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return TransitionPage();
+                    },
+                  ),
+                )
+              },
+              child: Text("遷移時アニメーションサンプル", style: TextStyle(fontSize: 20)),
             ),
           ],
         ),

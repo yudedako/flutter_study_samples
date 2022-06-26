@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'table_page.dart';
 import 'hero_animation_page.dart';
 import 'transition_page.dart';
+import 'open_container_page.dart';
+import 'animation_controller_page.dart';
 
 class TopPage extends StatelessWidget {
   @override
@@ -23,7 +25,10 @@ class TopPage extends StatelessWidget {
                   ),
                 )
               },
-              child: Text("tableサンプル", style: TextStyle(fontSize: 20)),
+              child: Text(
+                "tableサンプル",
+                style: TextStyle(fontSize: 20),
+              ),
             ),
             TextButton(
               onPressed: () => {
@@ -35,7 +40,10 @@ class TopPage extends StatelessWidget {
                   ),
                 )
               },
-              child: Text("Heroアニメーションサンプル", style: TextStyle(fontSize: 20)),
+              child: Text(
+                "Heroアニメーションサンプル",
+                style: TextStyle(fontSize: 20),
+              ),
             ),
             TextButton(
               onPressed: () => {
@@ -47,7 +55,40 @@ class TopPage extends StatelessWidget {
                   ),
                 )
               },
-              child: Text("遷移時アニメーションサンプル", style: TextStyle(fontSize: 20)),
+              child: Text(
+                "遷移時アニメーションサンプル",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () => {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return OpenContainerPage();
+                    },
+                  ),
+                )
+              },
+              child: Text(
+                "animationsパッケージサンプル",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () => {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return AnimationControllerPage();
+                    },
+                  ),
+                )
+              },
+              child: Text(
+                "AnimationControllerサンプル",
+                style: TextStyle(fontSize: 20),
+              ),
             ),
           ],
         ),

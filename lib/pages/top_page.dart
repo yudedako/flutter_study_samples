@@ -3,6 +3,7 @@ import 'table_page.dart';
 import 'hero_animation_page.dart';
 import 'transition_page.dart';
 import 'open_container_page.dart';
+import 'shared_axis_transition_page.dart';
 import 'animation_controller_page.dart';
 import 'tween_staggered_page.dart';
 
@@ -72,7 +73,22 @@ class TopPage extends StatelessWidget {
                 )
               },
               child: Text(
-                "animationsパッケージサンプル",
+                "animationsパッケージ(OpenContainer)サンプル",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            TextButton(
+              onPressed: () => {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SharedAxisTransitionPage();
+                    },
+                  ),
+                )
+              },
+              child: Text(
+                "animationsパッケージ(SharedAxisTransition)サンプル",
                 style: TextStyle(fontSize: 20),
               ),
             ),
